@@ -57,6 +57,7 @@
         background: rgba(0, 0, 0, 0.35);
         box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
         transform-style: preserve-3d;
+        transform-origin: right center;
         max-height: 92vh;
         overflow-y: auto;
         position: relative;
@@ -116,7 +117,7 @@
         overflow: hidden;
         background: #000;
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-        aspect-ratio: 4/3;
+        aspect-ratio: 4 / 3;
       }
 
       .slide {
@@ -194,8 +195,9 @@
         box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
       }
 
-      .spotify { height: 150px; }
-      .youtube { height: 250px; }
+      .youtube {
+        height: 250px;
+      }
 
       /* Back Button */
       .back {
@@ -231,14 +233,15 @@
         text-align: center;
         font-size: 0.75rem;
         opacity: 0.85;
+        color: #ffffff;
         pointer-events: none;
         font-weight: 600;
+        letter-spacing: 0.5px;
       }
     </style>
   </head>
 
   <body>
-
     <!-- Floating hearts -->
     <div class="heart h1">♥</div>
     <div class="heart h2">♥</div>
@@ -252,7 +255,6 @@
       <p class="sub">A letter, our memories, and the songs that feel like us.</p>
 
       <div class="grid">
-
         <!-- Letter -->
         <div class="letter">
           <p>
@@ -293,12 +295,14 @@
             </div>
           </div>
 
-          <p><b>Our Playlist</b> · on Spotify</p>
-          <iframe
-            class="spotify"
-            src="https://open.spotify.com/embed/playlist/18V2FBWR3PaOQ6GZ1YNqOf?utm_source=generator"
-            loading="lazy"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+          <p><b>Our Playlist</b> · on YouTube</p>
+          <iframe 
+            width="100%" 
+            height="350" 
+            src="https://www.youtube.com/embed/videoseries?list=PL5cV7wslLGS-M4RyVSgvLAB5GhS6mHN1t" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
           </iframe>
 
           <p><b>Our Video</b> · on YouTube</p>
@@ -363,4 +367,5 @@
     </script>
   </body>
 </html>
+
 
